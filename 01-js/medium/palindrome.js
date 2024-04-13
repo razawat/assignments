@@ -4,6 +4,15 @@
 */
 
 function isPalindrome(str) {
+  let arr = str.toLowerCase().split("").filter((val) => val>='a' && val<='z');
+  let [start,end] = [0,arr.length-1];
+  while(start<end) {
+    if(arr[start]!=arr[end]) {
+      return false;
+    }
+    start++;
+    end--;
+  }
   return true;
 }
 
